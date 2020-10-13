@@ -23,9 +23,13 @@ The following **extensions** are implemented:
 * [Yes] Background color.
 
 
-## Image of the App
+## Video Walkthrough
 
-![Screenshot](TippyPhoto.png)
+Here's a walkthrough of implemented user stories:
+
+<img src='Tippy_Video.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
