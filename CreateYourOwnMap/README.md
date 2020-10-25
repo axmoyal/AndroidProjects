@@ -8,11 +8,15 @@ Time spent: **12** hours spent in total
 
 ## Functionality 
 
+The following **required** functionality is completed:
+* Display a list of map titles
+* After tapping on a map title, display the associated places in a map
+* Allow the user to create a new map
 
 The **extensions** concern the design:
 
--Defining and setting background colors. 
--Changing font and color of forms and buttons. 
+* Defining and setting background colors. 
+* Changing font and color of forms and buttons. 
 
 ## Video Walkthrough
 
