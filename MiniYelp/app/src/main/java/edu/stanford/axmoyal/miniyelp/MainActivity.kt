@@ -1,8 +1,8 @@
 package edu.stanford.axmoyal.miniyelp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
@@ -10,6 +10,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import java.io.IOException
 
 private const val BASE_URL = "https://api.yelp.com/v3/"
 private const val TAG = "MainActivity"
@@ -31,6 +32,9 @@ class MainActivity : AppCompatActivity() {
 
         val yelpService = retrofit.create(YelpService::class.java)
 
+        //val b=isOnline();
+        //Log.i(TAG, "Internet : $b")
+
         yelpService.searchRestaurants("Bearer $API_KEY", "Avocado Toast", "New York").enqueue(object :
             Callback<YelpSearchResult> {
 
@@ -48,6 +52,21 @@ class MainActivity : AppCompatActivity() {
                 Log.i(TAG, "Failure $t")
             }
         })
+    }
+    fun isOnline(): Boolean {
+        val runtime = Runtime.getRuntime()
+        try {
+            Log.i(TAG, "Inside Internet")
+            val ipProcess = runtime.exec("/system/bin/ping -c 1 8.8.8.8")
+            val exitValue = ipProcess.waitFor()
+            Log.i(TAG, "Exit : $exitValue")
+            return exitValue == 0
+        } catch (e: IOException) {
+            e.printStackTrace()
+        } catch (e: InterruptedException) {
+            e.printStackTrace()
+        }
+        return false
     }
 
 }

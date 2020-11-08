@@ -12,6 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textColor="@android:color/holo_green_dark"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/tvDistance"
@@ -33,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:background="#FFFFFF"
         android:numStars="5"
         android:rating="4.5"
         android:stepSize="0.5"
@@ -44,6 +48,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:background="#FFFFFF"
+        android:textColor="@android:color/holo_green_light"
         app:layout_constraintStart_toStartOf="@+id/tvName"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar"
         tools:text="10 Kensington St" />
@@ -53,11 +59,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:textColor="@android:color/darker_gray"
+        android:background="#FFFFFF"
+        android:textColor="@android:color/holo_green_light"
         app:layout_constraintStart_toStartOf="@+id/tvName"
         app:layout_constraintTop_toBottomOf="@+id/tvAddress"
         tools:text="Breakfast" />
-
 
 
     <TextView
@@ -65,7 +71,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:textColor="@android:color/darker_gray"
+        android:background="#FFFFFF"
+        android:textColor="@android:color/holo_green_light"
         app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
         app:layout_constraintStart_toEndOf="@+id/ratingBar"
         tools:text="500 Reviews" />
@@ -75,7 +82,8 @@
         android:id="@+id/tvDistance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/darker_gray"
+        android:background="#FFFFFF"
+        android:textColor="@android:color/holo_green_light"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="2.0 mi" />
@@ -85,9 +93,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:textColor="@android:color/darker_gray"
+        android:background="#FFFFFF"
+        android:textColor="@android:color/holo_green_dark"
         app:layout_constraintEnd_toEndOf="@+id/tvDistance"
         app:layout_constraintTop_toBottomOf="@+id/tvDistance"
         tools:text="$$" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="60dp"
+        android:text="Tested"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
